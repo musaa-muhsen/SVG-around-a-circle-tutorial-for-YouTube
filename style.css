@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.main-logo-grid {
+
+    
+    width: 230px;
+    height: 230px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.rotating-outer-container {
+    width: 230px;
+    height: 230px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+}
+
+.rotating-outer-container svg {
+     animation: rotate 50s linear 0s infinite; 
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);} 
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+     75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.logo-container {
+    
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.make-middle {
+    width: 100px;
+    
+
+}
+.make-middle svg {
+    padding-top: 10px;
+}
+
+
+
+
+
+
